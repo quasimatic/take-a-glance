@@ -97,7 +97,7 @@ $(function () {
     })
     var paramsString = window.location.href
     var params = paramsString.split("/").length
-    if (paramsString.split("/")[parseInt(params) - 1] == "index.html") {
+    if (paramsString.endsWith("/")) {
         $("#level").hide();
         $("#level0").show();
         var currentState = history.state;
