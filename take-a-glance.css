@@ -23,7 +23,9 @@ svg * {
     background: #4479BA;
     color: #FFF;
 }
-
+.wrong {
+    fill: #FC7677;
+}
 .blue {
     fill: #00B2E1;
 }

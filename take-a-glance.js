@@ -26,13 +26,14 @@ function testResult(event) {
     var object = getGlanceElement().find(">")
     //test it the element clicked on is equal to the one found using glance selector
     if (object[0] != element[0]) {
+
         var color = element.css("fill");
-        element.css("fill", red);
+        element.addClass( "wrong");
         element.mouseleave(function () {
-            element.css("fill", color);
+            element.removeClass("wrong");
         });
         setTimeout(function () {
-            element.css("fill", color);
+            element.removeClass("wrong");
         }, 500)
     } else {
         var color = element.css("fill");
