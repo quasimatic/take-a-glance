@@ -1,0 +1,59 @@
+html {
+    background: #CDCDCD;
+}
+
+.text {
+    font-size: 40px;
+}
+
+svg {
+    stroke: #555555;
+    stroke-width: 2px;
+    width: 200px;
+    height: 200px;
+
+}
+
+svg * {
+    pointer-events: fill;
+}
+
+.button-link {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+}
+
+.blue {
+    fill: #00B2E1;
+}
+
+.yellow {
+    fill: #FFE869;
+}
+
+.peach {
+    fill: #EEB790;
+}
+
+.purple {
+    fill: #BE90D4;
+}
+
+.container {
+    display: none;
+    margin: 5px 5px 5px 5px;
+}
+
+.shape {
+    display: inline-block;
+    position: relative;
+    pointer-events: none;
+}
+
+.innershape-1 {
+    transform: scale(0.70, 0.70);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
