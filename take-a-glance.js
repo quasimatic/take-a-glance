@@ -3,6 +3,7 @@
 //styling selector
 //styling buttons
 // more examples of each kind
+// add instructions for selectors when introducing them in game
 
 var peach = "#EEB790"
 var purple = "#BE90D4"
@@ -98,7 +99,7 @@ $(function () {
     })
     var paramsString = window.location.href
     var params = paramsString.split("/").length
-    if (paramsString.endsWith("/")) {
+    if (paramsString.endsWith("/") || baseUrl.toString().endsWith("index.html")){
         $("#level").hide();
         $("#level0").show();
         var currentState = history.state;
@@ -110,8 +111,8 @@ $(function () {
         if (getUrlVars()["level"] != 0)
             $("#start").hide()
     }
-
-    $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
+    if( $("#glanceSelector").text == "intro")
+        $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
 
     jQuery('img.svg').each(function () {
         var $img = jQuery(this);
