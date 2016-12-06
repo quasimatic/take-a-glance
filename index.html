@@ -13,11 +13,10 @@
     <button id="start" class="button" onclick="start()" style="">start</button>
     <div id="glanceSelector" class=text></div>
 </div>
-<div id="level0" data-selector="intro" class="text" style="display:none;">
+<div id="level0" data-selector="" class="text" style="display:none;">
     Glance is a language that can be used to help find objects on screen <p>
     When possible using on screen information as a guide to your desired element <p>
-    In our first Example we put a dynamic label, <p>
-    each level the label contains a glance selector pointing to the element you should click on.<p>
+    In our first Example we put a dynamic label, each level the label contains a glance selector pointing to the element you should click on.<p>
 </div>
 <div id="" data-selector="square" class="container" style="display:none;">
     <div class="shape blue square" style="width:100px;height:100px">
@@ -65,6 +64,7 @@
         <img class="svg" src="http://quasimatic.org/take-a-glance/svg/triangle.svg"/>
     </div>
 </div>
+
 <div id="" class="container" data-selector="triangle" style="display:none;">
     <div class="shape purple square " style="width:200px;height:200px;">
         <img class="svg" src="http://quasimatic.org/take-a-glance/svg/square.svg"/>
@@ -92,6 +92,21 @@
             <img class="svg" src="http://quasimatic.org/take-a-glance/svg/circle.svg" style=""/>
         </div>
     </div>
+</div>
+<div id="" data-selector="" class="container text" style="display:none;">
+    <button id="continue" class="button" onclick="resume()" style="">continue</button><p>
+    Sometimes the Description is not enough by itself. <p>
+    In these cases we want to add context to our selectors <p>
+    the > sign is used to narrow down our scope <p>
+    <div class="shape blue circle " style="width:200px;height:200px;">
+        <img class="svg" src="http://quasimatic.org/take-a-glance/svg/circle.svg" style=""/>
+        <div class="shape yellow square innershape-1" style="width:200px;height:200px;">
+            <img class="svg" src="http://quasimatic.org/take-a-glance/svg/square.svg" style=""/>
+        </div>
+    </div> <p>
+    If we want to click on the inner square "circle > square" would be instructing the selector to for a square that is in the scope of a circle
+
+    <p>
 </div>
 <div id="" class="container" data-selector="square > circle" style="display:none;">
     <div class="shape blue square " style="width:200px;height:200px;">
@@ -580,7 +595,7 @@
     </div>
 </div>
 
-
+<!--
 <div id="" class="container" data-selector="blue#3 > circle ^ peach" style="display:none;">
     <div class="shape square blue " style="width:200px;height:200px;">
         <img class="svg" src="http://quasimatic.org/take-a-glance/svg/square.svg"/>
@@ -750,7 +765,7 @@
             </div>
         </div>
     </div>
-    <div class="shape circle blue " style="width:200px;height:200px;">
+<div class="shape circle blue " style="width:200px;height:200px;">
         <img class="svg" src="http://quasimatic.org/take-a-glance/svg/circle.svg"/>
 
         <div class="shape circle yellow innershape-1" style="width:200px;height:200px;">
@@ -765,7 +780,11 @@
             </div>
         </div>
     </div>
-
+    -->
+<div id="" data-selector="" class="container text" style="display:none;">
+ Thank you for playing
+    <p>
+</div>
 </div>
 
 </body>

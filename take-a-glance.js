@@ -62,6 +62,15 @@ function start() {
     $("#level1").show();
     $("#start").hide();
 }
+//resume button to continue after text screens
+function resume() {
+    var level = $(".container:visible").attr('id');
+    $(".container:visible").hide();
+    window.history.pushState("add level", "Title", baseUrl.split("?")[0] + "?level=" + (parseInt(getUrlVars()["level"])+1));
+    //element.css("fill", color);
+    $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
+    $("#level" +(parseInt(getUrlVars()["level"]))).show();
+}
 
 //function to read variables from url
 function getUrlVars() {
@@ -101,8 +110,9 @@ $(function () {
         if (getUrlVars()["level"] != 0)
             $("#start").hide()
     }
-    if( $("#glanceSelector").text == "intro")
+
         $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
+
 
     jQuery('img.svg').each(function () {
         var $img = jQuery(this);

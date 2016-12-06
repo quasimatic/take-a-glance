@@ -4,6 +4,7 @@ html {
 
 .text {
     font-size: 40px;
+    line-height: 1;
 }
 
 svg {
