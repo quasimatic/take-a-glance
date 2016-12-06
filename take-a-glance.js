@@ -51,16 +51,6 @@ function testResult(event) {
     }
 }
 
-//shows the answer
-function outlineSelector(event) {
-    var object = getGlanceElement(event)
-    console.log(object)
-    var color = $(object).find(">")[0].style.fill
-    $(object).find(">")[0].style.fill = green;
-    setTimeout(function () {
-        $(object).find(">")[0].style.fill = color;
-    }, 1100)
-}
 
 //start button to start level one after reading the intro
 function start() {

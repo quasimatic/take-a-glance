@@ -59,3 +59,9 @@ svg * {
     top: 0;
     left: 0;
 }
+
+.button {
+    border-radius: 4px;
+    background-color: #00B2E1;
+    font-size: 30px;
+    }
