@@ -5,6 +5,8 @@ html {
 .text {
     font-size: 40px;
     line-height: 1;
+    -webkit-filter: drop-shadow(1px 1px 1px #333333);
+    filter: drop-shadow(1px 1px 1px #333333);
 }
 
 svg {
@@ -12,7 +14,13 @@ svg {
     stroke-width: 2px;
     width: 200px;
     height: 200px;
+    -webkit-filter: drop-shadow(5px 5px 5px #333333) brightness(100%);
+    filter: drop-shadow(5px 5px 5px #333333) brightness(100%);
+  }
 
+svg:hover {
+    -webkit-filter: drop-shadow(2px 2px 2px #333333) brightness(80%);
+    filter: drop-shadow(2px 2px 2px #333333) brightness(80%);
 }
 
 svg * {
