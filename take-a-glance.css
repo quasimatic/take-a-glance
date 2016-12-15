@@ -19,9 +19,10 @@ svg {
   }
 
 svg:hover {
-    -webkit-filter: drop-shadow(2px 2px 2px #333333) brightness(80%);
-    filter: drop-shadow(2px 2px 2px #333333) brightness(80%);
+    -webkit-filter: drop-shadow(2px 2px 2px #333333) brightness(120%);
+    filter: drop-shadow(2px 2px 2px #333333) brightness(120%);
 }
+
 
 svg * {
     pointer-events: fill;
