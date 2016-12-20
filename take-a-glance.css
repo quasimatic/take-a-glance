@@ -12,18 +12,20 @@ svg {
     stroke-width: 2px;
     width: 200px;
     height: 200px;
-    -webkit-filter: drop-shadow(5px 5px 5px #333333) brightness(100%);
-    filter: drop-shadow(5px 5px 5px #333333) brightness(100%);
+    padding: 5px;
+    -webkit-filter: drop-shadow(0px 5px 5px #333333) brightness(100%);
+    filter: drop-shadow(0px 5px 5px #333333) brightness(100%);
   }
 
 svg:hover {
-    -webkit-filter: drop-shadow(2px 2px 2px #333333) brightness(120%);
-    filter: drop-shadow(2px 2px 2px #333333) brightness(120%);
+    -webkit-filter: drop-shadow(2px 0px 2px #333333) brightness(120%);
+    filter: drop-shadow(2px 0px 2px #333333) brightness(120%);
 }
 
 
 svg * {
     pointer-events: fill;
+
 }
 
 .button-link {
@@ -62,10 +64,7 @@ svg * {
 }
 
 .innershape-1 {
-    transform: scale(0.70, 0.70);
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .button {
@@ -73,3 +72,36 @@ svg * {
     background-color: #00B2E1;
     font-size: 30px;
     }
+
+.circle > .circle {
+    transform: scale(0.7, 0.7);
+    top: 0;
+    left: .1em;
+}
+
+.circle > .square {
+    transform: scale(0.56, 0.56);
+    top: 0;
+    left: .1em;
+}
+.square > .circle {
+    transform: scale(0.7, 0.7);
+    top: 0;
+    left: .1em;
+}
+
+.square > .triangle {
+    transform: scale(0.56, 0.56);
+    top: 0;
+    left: .1em;
+}
+.circle > .triangle {
+    transform: scale(0.56, 0.56);
+    top: 0;
+    left: .1em;
+}
+.square > .square {
+    transform: scale(0.6, 0.6);
+    top: 0;
+    left: .1em;
+}
