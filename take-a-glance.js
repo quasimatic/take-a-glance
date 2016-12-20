@@ -106,7 +106,7 @@ $(function () {
     } else {
         $("#level").hide();
         console.log(("#level" + getUrlVars()["level"]))
-        $("#level" + getUrlVars()["level"]).show();
+       // $("#level" + getUrlVars()["level"]).show();
         if (getUrlVars()["level"] != 0)
             $("#start").hide()
     }
@@ -143,4 +143,13 @@ $(function () {
             //$svg.find(">").attr('class', "blue")
         }, 'xml');
     });
+    //show level only after everything is loaded
+    var chkReadyState = setInterval(function() {
+        if (document.readyState == "complete") {
+            // clear the interval
+        $("#level" + getUrlVars()["level"]).show();
+            clearInterval(chkReadyState);
+            // finally your page is loaded.
+        }
+    }, 100);
 });
