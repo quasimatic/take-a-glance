@@ -15,12 +15,33 @@ var baseUrl = window.location.href
 var paramsString = window.location.href
 var searchParams = new URLSearchParams(paramsString);
 
+//function to set the glanceSelector and findlabel elements
+function setSelectorLabels() {
+    var selectorLabel = $("#level" + getUrlVars()["level"]).data("selector");
+    console.log(selectorLabel)
+    if (selectorLabel =="")
+        $("#labelAndSelector").hide();
+    else {
+        $("#glanceSelector").text(selectorLabel);
+        $("#findLabel").text("Click the object: ")
+        $("#labelAndSelector").show();
+    }
+}
+
 function getGlanceElement() {
     var elementName = $("#glanceSelector").text()
     var object = $(glanceSelector(elementName, {rootElement: $("#level" + getUrlVars()["level"])[0]})).find(">svg")
     return object
 }
 
+//function to continue to next level
+function goToNextLevel(){
+    var level = $(".container:visible").attr('id');
+    $(".container:visible").hide();
+    window.history.pushState("add level", "Title", baseUrl.split("?")[0] + "?level=" + (parseInt(getUrlVars()["level"])+1));
+    setSelectorLabels();
+    $("#level" +(parseInt(getUrlVars()["level"]))).show();
+}
 //on clicking an objects, tests too see if correct and moves to next level if so
 function testResult(event) {
     var element = $(event.currentTarget)
@@ -40,13 +61,8 @@ function testResult(event) {
         var color = element.css("fill");
         element.css("fill", green);
         setTimeout(function () {
-            var level = $(".container:visible").attr('id');
-            $(".container:visible").hide();
-            window.history.pushState("add level", "Title", baseUrl.split("?")[0] + "?level=" + (parseInt(getUrlVars()["level"])+1));
             element.css("fill", color);
-            $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
-            $("#level" +(parseInt(getUrlVars()["level"]))).show();
-            //$("#level" + (parseInt(level.slice(-1)) + 1).toString()).show()
+            goToNextLevel()
         }, 1100)
     }
 }
@@ -57,19 +73,13 @@ function start() {
     console.log(baseUrl.split("?")[0])
     window.history.pushState("add level", "Title", baseUrl.split("?")[0] + "?level=1");
     $("#level0").hide();
-    $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
-
+    setSelectorLabels();
     $("#level1").show();
     $("#start").hide();
 }
 //resume button to continue after text screens
 function resume() {
-    var level = $(".container:visible").attr('id');
-    $(".container:visible").hide();
-    window.history.pushState("add level", "Title", baseUrl.split("?")[0] + "?level=" + (parseInt(getUrlVars()["level"])+1));
-    //element.css("fill", color);
-    $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
-    $("#level" +(parseInt(getUrlVars()["level"]))).show();
+    goToNextLevel()
 }
 
 //function to read variables from url
@@ -85,6 +95,7 @@ function getUrlVars() {
 window.onpopstate = function (event) {
     var levelNo = getUrlVars(["level"]);
     $('div[id^="level"]').hide();
+    setSelectorLabels();
     $("#level" + levelNo.level).show();
     window.location.reload()
 };
@@ -107,11 +118,12 @@ $(function () {
         $("#level").hide();
         console.log(("#level" + getUrlVars()["level"]))
        // $("#level" + getUrlVars()["level"]).show();
+        setSelectorLabels();
         if (getUrlVars()["level"] != 0)
             $("#start").hide()
     }
 
-        $("#glanceSelector").text($("#level" + getUrlVars()["level"]).data("selector"));
+
 
 
     jQuery('img.svg').each(function () {
