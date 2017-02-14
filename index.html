@@ -16,8 +16,8 @@
             g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
             g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
             g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
-            d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
-            ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+                d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+                    ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
         })(window,document,window['_fs_namespace'],'script','user');
     </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -29,20 +29,19 @@
 </head>
 <body style="text-align: center;">
 <div id="toolbar" >
-<div id="labelAndSelector" ">
+    <div id="labelAndSelector" ">
     <div id="findLabel" class=text style="display:inline-block; "></div>
     <div id="glanceSelector" class=text style=" ;"></div>
-    </div>
+</div>
 </div>
 <div id="level0" data-selector=" " class="text" style="display:none;">
-    <h1>Take-A-Glance</h1><p>
+    <h2>Take-A-Glance</h2><p>
     Glance is a language that is meant to bridge the gap between code and human description.<p>
     "Take a glance" is a game that teaches you the basics of Glance<p>
     We will be using Glance to help find objects on the screen<p>
-    Each level has a label containing a Glance selector pointing to the object you should click on.<p>
-    For example:<p>
-    <img class="gif" src="assets/circle.gif" style="transform: scale(0.70, 0.70); vertical-align: text-top;"/><p>
-    Click the Start button below to begin
+    Each level has a label containing a Glance selector pointing to the object you should click on.
+    <br>For example:<br>
+    <img class="gif" src="assets/circle.gif" style="transform: scale(0.70, 0.70); vertical-align: text-top;"/>
     <div style="display: flex; justify-content: center; "><button id="start" class="button" onclick="start()" ><h1 style="margin:0;">Start</h1></button></div>
 </div>
 <div id="" data-selector="square" class="container" style="display:none;">
@@ -121,6 +120,7 @@
     </div>
 </div>
 <div id="" data-selector=" " class="container text" style="display:none;">
+    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
     Sometimes the description is not enough by itself. <p>
     In these cases we want to add context to our selectors <p>
     the > sign is used to give our target (on the right side) the relevant scope (on the left) <p>
@@ -139,8 +139,6 @@
         </div>
     </div><p>
     Since there are multiple square on the screen, we narrowed our scope to the square that is inside the circle.
-<p>
-    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
 
     <p>
 </div>
@@ -216,6 +214,7 @@
     </div>
 </div>
 <div id="" data-selector=" " class="container text" style="display:none;">
+    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
     The ^ sign is used for cases where we want to give more information about our object.<p>
     In the example below, "circle > square" would be instructing the selector to look for a square that is in the scope of a circle.
 
@@ -234,18 +233,17 @@
     Since there is only one yellow square, We could also describe the square as: <p>
     "yellow ^ square", which would be instructing Glance to look for an object which is both yellow and a square
 
-    <p>    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
 
     <p>
 </div>
 <div id="" class="container" data-selector="circle ^ blue" style="display:none;">
     <div class="shape blue circle " >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-        </div>
-        <div class="shape purple circle" >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-            </div>
     </div>
+    <div class="shape purple circle" >
+        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+    </div>
+</div>
 <div id="" class="container" data-selector="blue ^ circle" style="display:none;">
     <div class="shape blue circle " >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
@@ -287,10 +285,10 @@
 <div id="" class="container" data-selector="circle ^ blue" style="display:none;">
     <div class="shape blue square" >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
-    <div class="shape blue circle innershape-1" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-    </div>
+        <div class="shape blue circle innershape-1" >
+            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
         </div>
+    </div>
     <div class="shape purple circle" >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
     </div>
@@ -325,6 +323,7 @@
     </div>
 </div>
 <div id="" data-selector=" " class="container text" style="display:none;">
+    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
     The # sign is used to extend our selector, narrowing down which objects it describes.<p>
     One of the common uses is when we cannot find a way to differentiate between identical elements, we can tell it to choose a specific one by designating it's place.<p>
     In the example below, the two square are identical, so we can reference the second square by using:<p>
@@ -336,8 +335,6 @@
     <div class="shape blue square " >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
     </div><p>
-    <button id="continue" class="button" onclick="resume()" style="">Continue</button><p>
-
 </div>
 <div id="" class="container" data-selector="circle#2" style="display:none;">
     <div class="shape circle yellow " >
@@ -484,11 +481,11 @@
                 <div class="shape blue circle innershape-1" >
                     <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <div id="" class="container" data-selector="circle > circle" style="display:none;">
     <div class="shape circle yellow " >
         <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
@@ -522,7 +519,7 @@
 
 <div id="" data-selector=" " class="container text" style="display:none; text-align: center;">
     <p><p>
- Thank you for playing.<P>
+    Thank you for playing.<P>
     If you would like to know more about Glance <p>
     visit this <a href="http://quasimatic.org/glance/" style="color: blue; text-decoration: inherit;">website<a>
     <p>
