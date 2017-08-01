@@ -5,11 +5,11 @@ html {
 .text {
     font-size: 40px;
     line-height: 1;
+	color: #FFFFFF;
 }
 
 svg {
-    stroke: #555555;
-    stroke-width: 2px;
+
     width: 200px;
     height: 200px;
     padding: 5px;
@@ -41,7 +41,7 @@ svg * {
 }
 
 .yellow {
-    fill: #333333;
+    fill: #F1DF2C;
 }
 
 .peach {
