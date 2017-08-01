@@ -1,5 +1,5 @@
 html {
-    background: #CDCDCD;
+    background: #1B1B1B;
 }
 
 .text {
@@ -37,19 +37,19 @@ svg * {
     fill: #FC7677;
 }
 .blue {
-    fill: #00B2E1;
+    fill: #55B8F8;
 }
 
 .yellow {
-    fill: #FFE869;
+    fill: #333333;
 }
 
 .peach {
-    fill: #EEB790;
+    fill: #F88355;
 }
 
 .purple {
-    fill: #BE90D4;
+    fill: #912DEC;
 }
 
 .container {
