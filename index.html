@@ -4,21 +4,21 @@
 <head>
     <title>Take-A-Glance</title>
     <script>
-        window['_fs_debug'] = false;
-        window['_fs_host'] = 'www.fullstory.com';
-        window['_fs_org'] = '1Mm7';
-        window['_fs_namespace'] = 'FS';
-        (function(m,n,e,t,l,o,g,y){
-            if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
-            g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-            o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-            y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-            g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-            g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-            g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
-            d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
-            ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
-        })(window,document,window['_fs_namespace'],'script','user');
+		window['_fs_debug'] = false;
+		window['_fs_host'] = 'www.fullstory.com';
+		window['_fs_org'] = '1Mm7';
+		window['_fs_namespace'] = 'FS';
+		(function(m,n,e,t,l,o,g,y){
+			if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+			g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+			o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+			y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+			g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+			g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+			g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+				d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+					';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+		})(window,document,window['_fs_namespace'],'script','user');
     </script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -29,10 +29,10 @@
 </head>
 <body style="text-align: center;">
 <div id="toolbar" >
-<div id="labelAndSelector" ">
+    <div id="labelAndSelector" ">
     <div id="findLabel" class=text style="display:inline-block; "></div>
     <div id="glanceSelector" class=text style=" ;"></div>
-    </div>
+</div>
 </div>
 <div id="level0" data-selector=" " class="text" style="display:none;">
     <h2>Take-A-Glance</h2><p>
@@ -47,75 +47,75 @@
 <div id="" data-selector="square" class="container" style="display:none;">
     <div class="shape blue square" >
         <img class="svg" id="Square"
-             src="http://quasimatic.org/take-a-glance/assets/square.svg" onclick="testResult(event)"/>
+             src="assets/square.svg" onclick="testResult(event)"/>
     </div>
 
 </div>
 <div id="" data-selector="blue" class="container" style="display:none;">
     <div class="shape blue square" >
         <img class="svg " id="Square"
-             src="http://quasimatic.org/take-a-glance/assets/square.svg" onclick="testResult(event)"/>
+             src="assets/square.svg" onclick="testResult(event)"/>
     </div>
 
 </div>
 <div id="" class="container" data-selector="circle" style="display:none;">
     <div class="shape blue square" >
-        <img class="svg " src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg " src="assets/square.svg"/>
 
     </div>
     <div class="shape yellow circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
     </div>
 </div>
 <div id="" class="container" data-selector="triangle" style="display:none;">
     <div class="shape peach circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape blue square" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
     </div>
     <div class="shape yellow triangle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+        <img class="svg" src="assets/triangle.svg"/>
     </div>
 </div>
 <div id="" class="container" data-selector="yellow" style="display:none;">
     <div class="shape peach circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape blue square" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
     </div>
     <div class="shape yellow triangle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+        <img class="svg" src="assets/triangle.svg"/>
     </div>
 </div>
 
 <div id="" class="container" data-selector="triangle" style="display:none;">
     <div class="shape purple square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
         <div class="shape triangle peach innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+            <img class="svg" src="assets/triangle.svg"/>
         </div>
     </div>
     <div class="shape yellow square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape blue square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+            <img class="svg" src="assets/square.svg" style=""/>
         </div>
     </div>
 </div>
 <div id="" class="container" data-selector="blue" style="display:none;">
     <div class="shape peach circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape square peach innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape blue circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
@@ -127,15 +127,15 @@
     In the example below, "circle > square" would be instructing the selector to look for a target square that is in the scope of a circle.
 </p>
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+        <img class="svg" src="assets/circle.svg" style=""/>
         <div class="shape yellow square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+            <img class="svg" src="assets/square.svg" style=""/>
         </div>
     </div>
     <div class="shape purple circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape peach square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+            <img class="svg" src="assets/square.svg" style=""/>
         </div>
     </div><p>
     Since there are multiple square on the screen, we narrowed our scope to the square that is inside the circle.
@@ -144,72 +144,72 @@
 </div>
 <div id="" class="container" data-selector="square > circle" style="display:none;">
     <div class="shape blue square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape yellow circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 <div id="" class="container" data-selector="square > square" style="display:none;">
     <div class="shape purple square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
         <div class="shape square yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 <div id="" class="container" data-selector="yellow > blue" style="display:none;">
     <div class="shape yellow circle  " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape square blue innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
         </div>
     </div>
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+        <img class="svg" src="assets/circle.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 
 <div id="" class="container" data-selector="circle > circle" style="display:none;">
     <div class="shape blue square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
             <div class="shape circle peach innershape-1" >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
             </div>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 <div id="" class="container" data-selector="purple > circle" style="display:none;">
     <div class="shape blue square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
             <div class="shape circle peach innershape-1" >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
             </div>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
@@ -219,15 +219,15 @@
     In the example below, "circle > square" would be instructing the selector to look for a square that is in the scope of a circle.
 
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+        <img class="svg" src="assets/circle.svg" style=""/>
         <div class="shape yellow square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+            <img class="svg" src="assets/square.svg" style=""/>
         </div>
     </div>
     <div class="shape purple circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape peach square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+            <img class="svg" src="assets/square.svg" style=""/>
         </div>
     </div><p>
     Since there is only one yellow square, We could also describe the square as: <p>
@@ -238,87 +238,87 @@
 </div>
 <div id="" class="container" data-selector="circle ^ blue" style="display:none;">
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-        </div>
-        <div class="shape purple circle" >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-            </div>
-    </div>
-<div id="" class="container" data-selector="blue ^ circle" style="display:none;">
-    <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape purple circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
+    </div>
+</div>
+<div id="" class="container" data-selector="blue ^ circle" style="display:none;">
+    <div class="shape blue circle " >
+        <img class="svg" src="assets/circle.svg"/>
+    </div>
+    <div class="shape purple circle" >
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 
 <div id="" class="container" data-selector="circle > square" style="display:none;">
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape purple square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 <div id="" class="container" data-selector="square > circle" style="display:none;">
     <div class="shape blue circle " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape purple square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
 
 <div id="" class="container" data-selector="circle ^ blue" style="display:none;">
     <div class="shape blue square" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
-    <div class="shape blue circle innershape-1" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
-    </div>
+        <img class="svg" src="assets/square.svg"/>
+        <div class="shape blue circle innershape-1" >
+            <img class="svg" src="assets/circle.svg"/>
         </div>
+    </div>
     <div class="shape purple circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 <div id="" class="container" data-selector="square > circle" style="display:none;">
     <div class="shape blue square" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
         <div class="shape blue circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
         </div>
     </div>
     <div class="shape purple circle" >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 
 <div id="" class="container" data-selector="purple ^ square" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape purple square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
             <div class="shape triangle peach innershape-1" >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+                <img class="svg" src="assets/triangle.svg"/>
             </div>
         </div>
     </div>
     <div class="shape peach square " >
-        <img class="svg " src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg " src="assets/square.svg" style=""/>
         <div class="shape purple circle innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+            <img class="svg" src="assets/circle.svg" style=""/>
         </div>
     </div>
 </div>
@@ -330,76 +330,76 @@
     "square#2"
 
     <div class="shape blue square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
     </div>
     <div class="shape blue square " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+        <img class="svg" src="assets/square.svg" style=""/>
     </div><p>
 </div>
 <div id="" class="container" data-selector="circle#2" style="display:none;">
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 <div id="" class="container" data-selector="circle#2" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape circle peach " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape circle purple " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 <div id="" class="container" data-selector="circle#2" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
     <div class="shape triangle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+        <img class="svg" src="assets/triangle.svg"/>
     </div>
     <div class="shape square peach " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+        <img class="svg" src="assets/square.svg"/>
     </div>
     <div class="shape circle purple " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
     </div>
 </div>
 
 <div id="" class="container" data-selector="peach#2 ^ circle" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape square yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape triangle purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+                    <img class="svg" src="assets/triangle.svg"/>
                 </div>
             </div>
         </div>
     </div>
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape circle yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape circle purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                    <img class="svg" src="assets/circle.svg"/>
                 </div>
             </div>
         </div>
@@ -407,31 +407,31 @@
 </div>
 <div id="" class="container" data-selector="peach ^ circle#2" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape square yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape triangle purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+                    <img class="svg" src="assets/triangle.svg"/>
                 </div>
             </div>
         </div>
     </div>
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape circle yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape circle purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                    <img class="svg" src="assets/circle.svg"/>
                 </div>
             </div>
         </div>
@@ -439,31 +439,31 @@
 </div>
 <div id="" class="container" data-selector="peach ^ circle#2 > square" style="display:none;">
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape square yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape triangle purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/triangle.svg"/>
+                    <img class="svg" src="assets/triangle.svg"/>
                 </div>
             </div>
         </div>
     </div>
     <div class="shape circle blue " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
 
         <div class="shape circle yellow innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+            <img class="svg" src="assets/circle.svg"/>
 
             <div class="shape circle peach innershape-1 " >
-                <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+                <img class="svg" src="assets/circle.svg"/>
 
                 <div class="shape square purple innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+                    <img class="svg" src="assets/square.svg"/>
                 </div>
             </div>
         </div>
@@ -473,28 +473,28 @@
 
 <div id="" class="container" data-selector="circle > square > circle" style="display:none;">
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape peach square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
             <div class="shape blue square innershape-1" >
-                <img class="svg " src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+                <img class="svg " src="assets/square.svg" style=""/>
                 <div class="shape blue circle innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+                    <img class="svg" src="assets/circle.svg" style=""/>
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <div id="" class="container" data-selector="circle > circle" style="display:none;">
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape peach square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
             <div class="shape blue square innershape-1" >
-                <img class="svg " src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+                <img class="svg " src="assets/square.svg" style=""/>
                 <div class="shape blue circle innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+                    <img class="svg" src="assets/circle.svg" style=""/>
 
                 </div>
             </div>
@@ -503,13 +503,13 @@
 </div>
 <div id="" class="container" data-selector="blue ^ circle" style="display:none;">
     <div class="shape circle yellow " >
-        <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg"/>
+        <img class="svg" src="assets/circle.svg"/>
         <div class="shape peach square innershape-1" >
-            <img class="svg" src="http://quasimatic.org/take-a-glance/assets/square.svg"/>
+            <img class="svg" src="assets/square.svg"/>
             <div class="shape blue square innershape-1" >
-                <img class="svg " src="http://quasimatic.org/take-a-glance/assets/square.svg" style=""/>
+                <img class="svg " src="assets/square.svg" style=""/>
                 <div class="shape blue circle innershape-1" >
-                    <img class="svg" src="http://quasimatic.org/take-a-glance/assets/circle.svg" style=""/>
+                    <img class="svg" src="assets/circle.svg" style=""/>
 
                 </div>
             </div>
@@ -519,7 +519,7 @@
 
 <div id="" data-selector=" " class="container text" style="display:none; text-align: center;">
     <p><p>
- Thank you for playing.<P>
+    Thank you for playing.<P>
     If you would like to know more about Glance <p>
     visit this <a href="http://quasimatic.org/glance/" style="color: blue; text-decoration: inherit;">website<a>
     <p>
